@@ -807,10 +807,10 @@ document.addEventListener('touchmove', function(e) {
     for (var i = 0; i < touches.length; i++) {
         var pointer = pointers[i];
         pointer.moved = pointer.down;
-        pointer.dx = (touches[i].pageX - pointer.x) * 8.0;
-        pointer.dy = (touches[i].pageY - pointer.y) * 8.0;
-        pointer.x = touches[i].pageX;
-        pointer.y = touches[i].pageY;
+        pointer.dx = (touches[i].clientX - pointer.x) * 8.0;
+        pointer.dy = (touches[i].clientY - pointer.y) * 8.0;
+        pointer.x = touches[i].clientX;
+        pointer.y = touches[i].clientY;
     }
 }, false);
 
@@ -827,8 +827,8 @@ document.addEventListener('touchstart', function(e) {
 
         pointers[i].id = touches[i].identifier;
         pointers[i].down = true;
-        pointers[i].x = touches[i].pageX;
-        pointers[i].y = touches[i].pageY;
+        pointers[i].x = touches[i].clientX;
+        pointers[i].y = touches[i].clientY;
         pointers[i].color = generateColor();
     }
 });
