@@ -342,6 +342,10 @@ select {
   z-index: -1;
 }
 
+.header__menu-closed {
+  position: absolute;
+}
+
 .header__submenu {
   filter: brightness(0.6);
   transition: 0.2s ease-in-out;
@@ -1175,6 +1179,8 @@ select {
   width: 100%;
   margin-bottom: 200px;
   filter: grayscale(1);
+  border-radius: 10px;
+  overflow: hidden;
   transition: 0.2s ease-in-out;
 }
 

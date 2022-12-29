@@ -8,271 +8,296 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <title>Главная</title>
     <!-- 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css?_v=20221228161826"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css?_v=20221228161826">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css?_v=20221228161826">
-    <link rel="stylesheet" href="css/style.css?_v=20221228161826">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css?_v=20221229112458"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css?_v=20221229112458">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css?_v=20221229112458">
+    <link rel="stylesheet" href="css/style.css?_v=20221229112458">
+    <script type="text/javascript" src="js/dat.gui.min.js"></script>
+    <style>
+        canvas {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .dg.ac {
+            display: none!important;
+        }
+    </style>
+    <script>
+        window.ga = window.ga || function() {
+            (ga.q = ga.q || []).push(arguments)
+        };
+        ga.l = +new Date;
+        ga('create', 'UA-105392568-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src=''></script>
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-        <div class="header__container">
-            <a href="#" class="header__logo">
-                <img src="img/logo.svg" alt="AstanaCreative">
-            </a>
-            <nav class="header__nav">
-                <ul class="header__nav-list">
-                    <li class="header__nav-item">
-                        <a href="#" class="header__nav-link">о нас</a>
-                        <div class="header__menu">
-                            <div class="header__submenu">
-                                <div class="header__submenu-title">Дизайн</div>
-                                <div class="header__submenu-wrapper">
-                                    <div class="header__submenu-text">Если вам нужен дизайн, редизайн сайта или необходимо разработать логотип</div>
-                                    <div class="header__submenu-items">
-                                        <a href="#" class="header__submenu-link">Корпоративный  сайт</a>
-                                        <a href="#" class="header__submenu-link">Landing page</a>
-                                        <a href="#" class="header__submenu-link">Сайт-визитка</a>
-                                        <a href="#" class="header__submenu-link">Интернет-магазин</a>
+            <div class="header__container">
+                <a href="#" class="header__logo">
+                    <img src="img/logo.svg" alt="AstanaCreative">
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link">о нас</a>
+                            <div class="header__menu">
+                                <div class="header__submenu">
+                                    <div class="header__submenu-title">Дизайн</div>
+                                    <div class="header__submenu-wrapper">
+                                        <div class="header__submenu-text">Если вам нужен дизайн, редизайн сайта или необходимо разработать логотип</div>
+                                        <div class="header__submenu-items">
+                                            <a href="#" class="header__submenu-link">Корпоративный  сайт</a>
+                                            <a href="#" class="header__submenu-link">Landing page</a>
+                                            <a href="#" class="header__submenu-link">Сайт-визитка</a>
+                                            <a href="#" class="header__submenu-link">Интернет-магазин</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="header__submenu">
-                                <div class="header__submenu-title">Маркетинг</div>
-                                <div class="header__submenu-wrapper">
-                                    <div class="header__submenu-text">Если вам нужен дизайн, редизайн сайта или необходимо разработать логотип</div>
-                                    <div class="header__submenu-items">
-                                        <a href="#" class="header__submenu-link">Корпоративный  сайт</a>
-                                        <a href="#" class="header__submenu-link">Landing page</a>
-                                        <a href="#" class="header__submenu-link">Сайт-визитка</a>
-                                        <a href="#" class="header__submenu-link">Интернет-магазин</a>
+                                <div class="header__submenu">
+                                    <div class="header__submenu-title">Маркетинг</div>
+                                    <div class="header__submenu-wrapper">
+                                        <div class="header__submenu-text">Если вам нужен дизайн, редизайн сайта или необходимо разработать логотип</div>
+                                        <div class="header__submenu-items">
+                                            <a href="#" class="header__submenu-link">Корпоративный  сайт</a>
+                                            <a href="#" class="header__submenu-link">Landing page</a>
+                                            <a href="#" class="header__submenu-link">Сайт-визитка</a>
+                                            <a href="#" class="header__submenu-link">Интернет-магазин</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="header__submenu">
-                                <div class="header__submenu-title">Мобильные приложения</div>
-                                <div class="header__submenu-wrapper">
-                                    <div class="header__submenu-text">Если вам нужен дизайн, редизайн сайта или необходимо разработать логотип</div>
-                                    <div class="header__submenu-items">
-                                        <a href="#" class="header__submenu-link">Корпоративный  сайт</a>
-                                        <a href="#" class="header__submenu-link">Landing page</a>
-                                        <a href="#" class="header__submenu-link">Сайт-визитка</a>
-                                        <a href="#" class="header__submenu-link">Интернет-магазин</a>
+                                <div class="header__submenu">
+                                    <div class="header__submenu-title">Мобильные приложения</div>
+                                    <div class="header__submenu-wrapper">
+                                        <div class="header__submenu-text">Если вам нужен дизайн, редизайн сайта или необходимо разработать логотип</div>
+                                        <div class="header__submenu-items">
+                                            <a href="#" class="header__submenu-link">Корпоративный  сайт</a>
+                                            <a href="#" class="header__submenu-link">Landing page</a>
+                                            <a href="#" class="header__submenu-link">Сайт-визитка</a>
+                                            <a href="#" class="header__submenu-link">Интернет-магазин</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="header__submenu">
-                                <div class="header__submenu-title">Разработка сайтов</div>
-                                <div class="header__submenu-wrapper">
-                                    <div class="header__submenu-text">Если вам нужен дизайн, редизайн сайта или необходимо разработать логотип</div>
-                                    <div class="header__submenu-items">
-                                        <a href="#" class="header__submenu-link">Корпоративный  сайт</a>
-                                        <a href="#" class="header__submenu-link">Landing page</a>
-                                        <a href="#" class="header__submenu-link">Сайт-визитка</a>
-                                        <a href="#" class="header__submenu-link">Интернет-магазин</a>
+                                <div class="header__submenu">
+                                    <div class="header__submenu-title">Разработка сайтов</div>
+                                    <div class="header__submenu-wrapper">
+                                        <div class="header__submenu-text">Если вам нужен дизайн, редизайн сайта или необходимо разработать логотип</div>
+                                        <div class="header__submenu-items">
+                                            <a href="#" class="header__submenu-link">Корпоративный  сайт</a>
+                                            <a href="#" class="header__submenu-link">Landing page</a>
+                                            <a href="#" class="header__submenu-link">Сайт-визитка</a>
+                                            <a href="#" class="header__submenu-link">Интернет-магазин</a>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="header__menu-closed"></div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#" class="header__nav-link">услуги</a>
-                        <div class="header__menu">
-                            <div class="header__submenu">
-                                <div class="header__submenu-title">Дизайн</div>
-                                <div class="header__submenu-wrapper">
-                                    <div class="header__submenu-text">Если вам нужен дизайн, редизайн сайта или необходимо разработать логотип</div>
-                                    <div class="header__submenu-items">
-                                        <a href="#" class="header__submenu-link">Корпоративный  сайт</a>
-                                        <a href="#" class="header__submenu-link">Landing page</a>
-                                        <a href="#" class="header__submenu-link">Сайт-визитка</a>
-                                        <a href="#" class="header__submenu-link">Интернет-магазин</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link">услуги</a>
+                            <div class="header__menu">
+                                <div class="header__submenu">
+                                    <div class="header__submenu-title">Дизайн</div>
+                                    <div class="header__submenu-wrapper">
+                                        <div class="header__submenu-text">Если вам нужен дизайн, редизайн сайта или необходимо разработать логотип</div>
+                                        <div class="header__submenu-items">
+                                            <a href="#" class="header__submenu-link">Корпоративный  сайт</a>
+                                            <a href="#" class="header__submenu-link">Landing page</a>
+                                            <a href="#" class="header__submenu-link">Сайт-визитка</a>
+                                            <a href="#" class="header__submenu-link">Интернет-магазин</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="header__submenu">
-                                <div class="header__submenu-title">Маркетинг</div>
-                                <div class="header__submenu-wrapper">
-                                    <div class="header__submenu-text">Если вам нужен дизайн, редизайн сайта или необходимо разработать логотип</div>
-                                    <div class="header__submenu-items">
-                                        <a href="#" class="header__submenu-link">Корпоративный  сайт</a>
-                                        <a href="#" class="header__submenu-link">Landing page</a>
-                                        <a href="#" class="header__submenu-link">Сайт-визитка</a>
-                                        <a href="#" class="header__submenu-link">Интернет-магазин</a>
+                                <div class="header__submenu">
+                                    <div class="header__submenu-title">Маркетинг</div>
+                                    <div class="header__submenu-wrapper">
+                                        <div class="header__submenu-text">Если вам нужен дизайн, редизайн сайта или необходимо разработать логотип</div>
+                                        <div class="header__submenu-items">
+                                            <a href="#" class="header__submenu-link">Корпоративный  сайт</a>
+                                            <a href="#" class="header__submenu-link">Landing page</a>
+                                            <a href="#" class="header__submenu-link">Сайт-визитка</a>
+                                            <a href="#" class="header__submenu-link">Интернет-магазин</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="header__submenu">
-                                <div class="header__submenu-title">Мобильные приложения</div>
-                                <div class="header__submenu-wrapper">
-                                    <div class="header__submenu-text">Если вам нужен дизайн, редизайн сайта или необходимо разработать логотип</div>
-                                    <div class="header__submenu-items">
-                                        <a href="#" class="header__submenu-link">Корпоративный  сайт</a>
-                                        <a href="#" class="header__submenu-link">Landing page</a>
-                                        <a href="#" class="header__submenu-link">Сайт-визитка</a>
-                                        <a href="#" class="header__submenu-link">Интернет-магазин</a>
+                                <div class="header__submenu">
+                                    <div class="header__submenu-title">Мобильные приложения</div>
+                                    <div class="header__submenu-wrapper">
+                                        <div class="header__submenu-text">Если вам нужен дизайн, редизайн сайта или необходимо разработать логотип</div>
+                                        <div class="header__submenu-items">
+                                            <a href="#" class="header__submenu-link">Корпоративный  сайт</a>
+                                            <a href="#" class="header__submenu-link">Landing page</a>
+                                            <a href="#" class="header__submenu-link">Сайт-визитка</a>
+                                            <a href="#" class="header__submenu-link">Интернет-магазин</a>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="header__menu-closed"></div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">Портфолио</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">цены</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">статьи</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">Контакты</a></li>
-                </ul>
-            </nav>
-            <a href="tel:+7 (775) 007-31-04" class="header__phone">
+                        </li>
+                        <li class="header__nav-item"><a href="#" class="header__nav-link">Портфолио</a></li>
+                        <li class="header__nav-item"><a href="#" class="header__nav-link">цены</a></li>
+                        <li class="header__nav-item"><a href="#" class="header__nav-link">статьи</a></li>
+                        <li class="header__nav-item"><a href="#" class="header__nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <a href="tel:+7 (775) 007-31-04" class="header__phone">
                 +7 (775) 007-31-04
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M9.30908 10.7158L9.30124 3.11243L1.32598 11.0877L0.0574469 9.81917L8.03271 1.84391L0.429385 1.83606L0.427554 0.0619492L11.0722 0.0729364L11.0832 10.7176L9.30908 10.7158Z" fill="#E3E0DB"/>
                 </svg>                    
             </a>
-            <div class="header__lang">
-                <a href="#" class="header__lang-link">kz</a>
-                <a href="#" class="header__lang-link active">ru</a>
-                <a href="#" class="header__lang-link">en</a>
-            </div>
-            <div class="burger" id="menu-icon">
-                <div class="burger__dot burger__dot--line burger__dot--left-top"></div>
-                <div class="burger__dot burger__dot--aside"></div>
-                <div class="burger__dot burger__dot--line burger__dot--right-top"></div>
-                <div class="burger__dot burger__dot--aside"></div>
-                <div class="burger__dot burger__dot--aside"></div>
-                <div class="burger__dot burger__dot--aside"></div>
-                <div class="burger__dot burger__dot--line burger__dot--left-bottom"></div>
-                <div class="burger__dot burger__dot--aside"></div>
-                <div class="burger__dot burger__dot--line burger__dot--right-bottom"></div>
-            </div>
-            <a href="javascript:;" class="header__close-submenu">
-                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="header__lang">
+                    <a href="#" class="header__lang-link">kz</a>
+                    <a href="#" class="header__lang-link active">ru</a>
+                    <a href="#" class="header__lang-link">en</a>
+                </div>
+                <div class="burger" id="menu-icon">
+                    <div class="burger__dot burger__dot--line burger__dot--left-top"></div>
+                    <div class="burger__dot burger__dot--aside"></div>
+                    <div class="burger__dot burger__dot--line burger__dot--right-top"></div>
+                    <div class="burger__dot burger__dot--aside"></div>
+                    <div class="burger__dot burger__dot--aside"></div>
+                    <div class="burger__dot burger__dot--aside"></div>
+                    <div class="burger__dot burger__dot--line burger__dot--left-bottom"></div>
+                    <div class="burger__dot burger__dot--aside"></div>
+                    <div class="burger__dot burger__dot--line burger__dot--right-bottom"></div>
+                </div>
+                <a href="javascript:;" class="header__close-submenu">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.7373 10.5002L20.7434 1.49388C21.0855 1.15177 21.0855 0.598893 20.7434 0.256582C20.4014 -0.0855273 19.8484 -0.0855273 19.5063 0.256582L10.5 9.2629L1.49384 0.256582C1.15158 -0.0855273 0.598654 -0.0855273 0.256545 0.256582C-0.0855149 0.598893 -0.0855149 1.15177 0.256545 1.49388L9.26268 10.5002L0.256545 19.5063C-0.0855149 19.8484 -0.0855149 20.4015 0.256545 20.7436C0.427095 20.9141 0.65117 21 0.875195 21C1.09907 21 1.32314 20.9141 1.49384 20.7436L10.5 11.7373L19.5063 20.7436C19.6769 20.9141 19.9009 21 20.1248 21C20.3488 21 20.5729 20.9141 20.7434 20.7436C21.0855 20.4015 21.0855 19.8484 20.7434 19.5063L11.7373 10.5002Z" fill="#E3E0DB"/>
                 </svg>
-            </a>
-            <div class="mobmenu">
-                <div class="mobmenu__nav">
-                    <ul class="mobmenu__nav-list">
-                        <li class="mobmenu__nav-item">
-                            <a href="javascript:;" class="mobmenu__nav-link">
+                </a>
+                <div class="mobmenu">
+                    <div class="mobmenu__nav">
+                        <ul class="mobmenu__nav-list">
+                            <li class="mobmenu__nav-item">
+                                <a href="javascript:;" class="mobmenu__nav-link">
                                 О нас
                                 <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0.916667 4.42684L4.84524 8.45122L4.84524 2.11792e-07L6.15476 2.69033e-07L6.15476 8.45122L10.0833 4.42684L11 5.36586L5.5 11L-2.34549e-07 5.36586L0.916667 4.42684Z" fill="#9F9D99"/>
                                 </svg>
                             </a>
-                            <ul class="mobmenu__nav-submenu">
-                                <li class="submenu-item">
-                                    <a href="javascript:;" class="submenu-link">Дизайн
+                                <ul class="mobmenu__nav-submenu">
+                                    <li class="submenu-item">
+                                        <a href="javascript:;" class="submenu-link">Дизайн
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666667 3.21952L3.52381 6.14634L3.52381 1.54031e-07L4.47619 1.95661e-07L4.47619 6.14634L7.33333 3.21952L8 3.90244L4 8L-1.70581e-07 3.90244L0.666667 3.21952Z" fill="#444342"/>
                                         </svg>
                                     </a>
-                                    <ul>
-                                        <li>
-                                            <a href="#">Логотип</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Дизайн сайтов</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="submenu-item">
-                                    <a href="javascript:;" class="submenu-link">Дизайн
+                                        <ul>
+                                            <li>
+                                                <a href="#">Логотип</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Дизайн сайтов</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="javascript:;" class="submenu-link">Дизайн
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666667 3.21952L3.52381 6.14634L3.52381 1.54031e-07L4.47619 1.95661e-07L4.47619 6.14634L7.33333 3.21952L8 3.90244L4 8L-1.70581e-07 3.90244L0.666667 3.21952Z" fill="#444342"/>
                                         </svg>
                                     </a>
-                                    <ul>
-                                        <li>
-                                            <a href="#">Логотип</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Дизайн сайтов</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="submenu-item">
-                                    <a href="javascript:;" class="submenu-link">Дизайн
+                                        <ul>
+                                            <li>
+                                                <a href="#">Логотип</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Дизайн сайтов</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="javascript:;" class="submenu-link">Дизайн
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666667 3.21952L3.52381 6.14634L3.52381 1.54031e-07L4.47619 1.95661e-07L4.47619 6.14634L7.33333 3.21952L8 3.90244L4 8L-1.70581e-07 3.90244L0.666667 3.21952Z" fill="#444342"/>
                                         </svg>
                                     </a>
-                                    <ul>
-                                        <li>
-                                            <a href="#">Логотип</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Дизайн сайтов</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mobmenu__nav-item">
-                            <a href="javascript:;" class="mobmenu__nav-link">
+                                        <ul>
+                                            <li>
+                                                <a href="#">Логотип</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Дизайн сайтов</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobmenu__nav-item">
+                                <a href="javascript:;" class="mobmenu__nav-link">
                                 Услуги
                                 <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0.916667 4.42684L4.84524 8.45122L4.84524 2.11792e-07L6.15476 2.69033e-07L6.15476 8.45122L10.0833 4.42684L11 5.36586L5.5 11L-2.34549e-07 5.36586L0.916667 4.42684Z" fill="#9F9D99"/>
                                 </svg>
                             </a>
-                            <ul class="mobmenu__nav-submenu">
-                                <li class="submenu-item">
-                                    <a href="javascript:;" class="submenu-link">Дизайн
+                                <ul class="mobmenu__nav-submenu">
+                                    <li class="submenu-item">
+                                        <a href="javascript:;" class="submenu-link">Дизайн
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666667 3.21952L3.52381 6.14634L3.52381 1.54031e-07L4.47619 1.95661e-07L4.47619 6.14634L7.33333 3.21952L8 3.90244L4 8L-1.70581e-07 3.90244L0.666667 3.21952Z" fill="#444342"/>
                                         </svg>
                                     </a>
-                                    <ul>
-                                        <li>
-                                            <a href="#">Логотип</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Дизайн сайтов</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="submenu-item">
-                                    <a href="javascript:;" class="submenu-link">Дизайн
+                                        <ul>
+                                            <li>
+                                                <a href="#">Логотип</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Дизайн сайтов</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="javascript:;" class="submenu-link">Дизайн
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666667 3.21952L3.52381 6.14634L3.52381 1.54031e-07L4.47619 1.95661e-07L4.47619 6.14634L7.33333 3.21952L8 3.90244L4 8L-1.70581e-07 3.90244L0.666667 3.21952Z" fill="#444342"/>
                                         </svg>
                                     </a>
-                                    <ul>
-                                        <li>
-                                            <a href="#">Логотип</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Дизайн сайтов</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="submenu-item">
-                                    <a href="javascript:;" class="submenu-link">Дизайн
+                                        <ul>
+                                            <li>
+                                                <a href="#">Логотип</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Дизайн сайтов</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="javascript:;" class="submenu-link">Дизайн
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666667 3.21952L3.52381 6.14634L3.52381 1.54031e-07L4.47619 1.95661e-07L4.47619 6.14634L7.33333 3.21952L8 3.90244L4 8L-1.70581e-07 3.90244L0.666667 3.21952Z" fill="#444342"/>
                                         </svg>
                                     </a>
-                                    <ul>
-                                        <li>
-                                            <a href="#">Логотип</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Дизайн сайтов</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mobmenu__nav-item"><a href="#" class="mobmenu__nav-link">Портфолио</a></li>
-                        <li class="mobmenu__nav-item"><a href="#" class="mobmenu__nav-link">Цены</a></li>
-                        <li class="mobmenu__nav-item"><a href="#" class="mobmenu__nav-link">Статьи</a></li>
-                        <li class="mobmenu__nav-item"><a href="#" class="mobmenu__nav-link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="mobmenu__items"></div>
-                <div class="mobmenu__social">
-                    <a href="#" target="_blank" class="mobmenu__social-link">
-                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <ul>
+                                            <li>
+                                                <a href="#">Логотип</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Дизайн сайтов</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobmenu__nav-item"><a href="#" class="mobmenu__nav-link">Портфолио</a></li>
+                            <li class="mobmenu__nav-item"><a href="#" class="mobmenu__nav-link">Цены</a></li>
+                            <li class="mobmenu__nav-item"><a href="#" class="mobmenu__nav-link">Статьи</a></li>
+                            <li class="mobmenu__nav-item"><a href="#" class="mobmenu__nav-link">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobmenu__items"></div>
+                    <div class="mobmenu__social">
+                        <a href="#" target="_blank" class="mobmenu__social-link">
+                            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_241_10353)">
                             <rect x="0.5" y="0.5" width="34" height="34" rx="3.5" stroke="#444342"/>
                             <path d="M24.1924 10.7591C22.4058 8.98093 20.0291 8.00101 17.4996 8C14.9757 8 12.5953 8.97905 10.7969 10.7568C8.99537 12.5376 8.00232 14.9042 8 17.412V17.4149V17.4166C8.00029 18.9345 8.39945 20.4657 9.15716 21.8634L8.02597 27L13.2267 25.8182C14.5439 26.4813 16.0136 26.831 17.4959 26.8316H17.4997C20.0231 26.8316 22.4036 25.8524 24.2022 24.0744C26.0054 22.2922 26.9988 19.9286 27 17.4193C27.0007 14.9276 26.0038 12.5623 24.1924 10.7591V10.7591ZM17.4996 25.3486H17.4962C16.1652 25.3481 14.8464 25.0142 13.6826 24.3829L13.4367 24.2496L9.97841 25.0354L10.7296 21.6248L10.5848 21.3753C9.8648 20.1349 9.48435 18.7656 9.48435 17.4151C9.48711 13.0435 13.0823 9.48293 17.4993 9.48293C19.6331 9.4838 21.638 10.3102 23.1447 11.8097C24.6742 13.3323 25.5162 15.3243 25.5155 17.4188C25.5138 21.7914 21.9178 25.3486 17.4996 25.3486V25.3486Z" fill="#9F9D99"/>
@@ -284,9 +309,9 @@
                             </clipPath>
                             </defs>
                         </svg>
-                    </a>
-                    <a href="#" target="_blank" class="mobmenu__social-link">
-                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        </a>
+                        <a href="#" target="_blank" class="mobmenu__social-link">
+                            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_241_10358)">
                             <rect x="0.5" y="0.5" width="34" height="34" rx="3.5" stroke="#444342"/>
                             <path d="M18.9 24C12.0625 24 8.1625 19.488 8 12H11.425C11.5375 17.496 14.0625 19.8 16.0625 20.304V12H19.2875V16.74C21.2625 16.536 23.3375 14.4 24.0375 12H27.2625C27.0034 13.2356 26.481 14.4063 25.7281 15.4389C24.9752 16.4714 24.0081 17.3433 22.8875 18C24.1322 18.5975 25.2311 19.441 26.1122 20.4751C26.9933 21.5091 27.6367 22.7104 28 24H24.4625C24.1357 22.8758 23.4701 21.8695 22.5493 21.1073C21.6286 20.3451 20.4938 19.861 19.2875 19.716V24H18.9Z" fill="#9F9D99"/>
@@ -297,9 +322,9 @@
                             </clipPath>
                             </defs>
                         </svg>
-                    </a>
-                    <a href="#" target="_blank" class="mobmenu__social-link">
-                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        </a>
+                        <a href="#" target="_blank" class="mobmenu__social-link">
+                            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_241_10362)">
                             <rect x="0.5" y="0.5" width="34" height="34" rx="3.5" stroke="#444342"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M9.16403 17.0382C13.7267 15.0688 16.7685 13.7644 18.2894 13.1252C22.6305 11.3242 23.543 11.0132 24.1297 11.0003C24.348 10.9955 24.5623 11.0589 24.7424 11.1816C24.8658 11.2929 24.9445 11.4448 24.964 11.6092C25.0006 11.8101 25.0093 12.015 24.9901 12.2182C24.7554 14.68 23.7386 20.6532 23.2171 23.4001C22.9955 24.5663 22.5653 24.955 22.1481 24.9938C21.2356 25.0716 20.5447 24.3978 19.6713 23.8277C18.2894 22.9337 17.5164 22.3765 16.1775 21.4954C14.6262 20.4848 15.63 19.9276 16.5165 19.0207C16.7511 18.7874 20.7533 15.1595 20.8315 14.8355C20.8412 14.7873 20.8392 14.7374 20.8256 14.69C20.812 14.6427 20.7872 14.5993 20.7533 14.5634C20.7049 14.5337 20.6501 14.5159 20.5935 14.5114C20.5368 14.5069 20.4799 14.5158 20.4274 14.5375C20.284 14.5634 18.0939 16.0146 13.831 18.8781C13.2053 19.3057 12.6447 19.513 12.1363 19.5001C11.5757 19.4871 10.5068 19.1891 9.69851 18.93C8.72079 18.619 7.93862 18.4505 8.0038 17.9063C8.04291 17.6213 8.434 17.3362 9.16403 17.0382Z" fill="#9F9D99"/>
@@ -310,9 +335,9 @@
                             </clipPath>
                             </defs>
                         </svg>
-                    </a>
-                    <a href="#" target="_blank" class="mobmenu__social-link">
-                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        </a>
+                        <a href="#" target="_blank" class="mobmenu__social-link">
+                            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_241_10366)">
                             <rect x="0.5" y="0.5" width="34" height="34" rx="3.5" stroke="#444342"/>
                             <path d="M16.2645 17.3972C16.2645 17.3972 17.9677 17.2708 17.9677 15.273C17.9677 13.2754 16.5741 12.3008 14.8087 12.3008H11.5594H11.464H9V23.4639H11.464H11.5594H14.8087C14.8087 23.4639 18.3547 23.5761 18.3547 20.1691C18.3549 20.1691 18.5096 17.3972 16.2645 17.3972V17.3972ZM11.5594 14.2851H14.3907H14.8089C14.8089 14.2851 15.5986 14.2851 15.5986 15.4464C15.5986 16.6077 15.134 16.7761 14.6075 16.7761H11.5594V14.2851ZM14.659 21.4802H11.5594V18.4967H14.8087C14.8087 18.4967 15.9857 18.4817 15.9857 20.0299C15.9857 21.3209 15.1249 21.4672 14.659 21.4802Z" fill="#9F9D99"/>
@@ -325,13 +350,14 @@
                             </clipPath>
                             </defs>
                         </svg>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
     </header>
     <div class="header-space"></div>
+    <canvas></canvas>
     <main>
         <section class="hero">
             <div class="container">
@@ -961,20 +987,29 @@
                 <img src="img/shape-3.png">
             </div>
         </section>
+
     </main>
+
+    <div class="popup form_loader " id="form_loader ">
+        <div class="form_loader_block ">
+            <div class="form_loader_animate "></div>
+            <div class="form_loader_text " style="color: #000; ">Пожалуйста, подождите</div>
+        </div>
+    </div>
     <footer class="footer">
     </footer>
-<!-- 
-<script src="js/slick.min.js?_v=20221228161826"></script> -->
-<!-- 
+    <!-- <script src="js/jquery-3.6.0.min.js?_v=20221229112458"></script>
+<script src="js/slick.min.js?_v=20221229112458"></script> -->
+    <!-- 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js?_v=20221228161826"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js?_v=20221228161826"></script> -->
-<script src="js/jquery-3.6.0.min.js?_v=20221228161826"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js?_v=20221228161826" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js?_v=20221228161826"></script>
-<script src="js/jquery-marquee.js" type="text/javascript"></script>
-<script src="js/app.js?_v=20221228161826"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js?_v=20221229112458"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js?_v=20221229112458"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20221229112458" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js?_v=20221229112458" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js?_v=20221229112458"></script>
+    <script src="js/jquery-marquee.js" type="text/javascript"></script>
+    <script src="js/app.js?_v=20221229112458"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
