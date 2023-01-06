@@ -79,16 +79,27 @@ document.addEventListener('DOMContentLoaded', () => {
         submenuCloseBtn.addEventListener('click', () => {
             submenuItems.forEach(item => item.style.display = 'none');
             submenuCloseBtn.style.display = 'none';
-            let headerMenuLinks = document.querySelector('.header__nav-link.active')
+            let headerMenuLinks = document.querySelector('.header__nav-link.active');
             if (headerMenuLinks) {
                 headerMenuLinks.classList.remove('active');
+            }
+        });
+        document.addEventListener('mouseover', e => {
+            const target = e.target;
+            if (!target.closest('.header')) {
+                submenuItems.forEach(item => item.style.display = 'none');
+                submenuCloseBtn.style.display = 'none';
+                let headerMenuLinks = document.querySelector('.header__nav-link.active');
+                if (headerMenuLinks) {
+                    headerMenuLinks.classList.remove('active');
+                }
             }
         })
     }
     // validate Form feedback
     let feedbackForm = document.getElementById('feedback-form');
     if (feedbackForm) {
-        let feedbackInputs = document.querySelectorAll('.feedback-input');
+        let feedbackInputs = feedbackForm.querySelectorAll('.feedback-input');
         // feedbackInputs.forEach(input => {
         //     input.addEventListener('focus', e => {
         //         const target = e.target;
@@ -123,7 +134,43 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     }
-
+    let feedbackFormSecond = document.getElementById('feedback-form-2');
+    if (feedbackFormSecond) {
+        let feedbackInputs = feedbackFormSecond.querySelectorAll('.feedback-input');
+        // feedbackInputs.forEach(input => {
+        //     input.addEventListener('focus', e => {
+        //         const target = e.target;
+        //         target.previousElementSibling.classList.add('focus');
+        //     })
+        // })
+        feedbackFormSecond.addEventListener('focus', e => {
+            const target = e.target;
+            if (target.classList.contains('feedback-input')) {
+                target.previousElementSibling.classList.add('focus')
+                target.nextElementSibling.classList.remove('show');
+                target.previousElementSibling.classList.remove('warning');
+            }
+        }, true);
+        feedbackFormSecond.addEventListener('blur', e => {
+            const target = e.target;
+            if (target.classList.contains('feedback-input')) {
+                target.previousElementSibling.classList.remove('focus')
+            }
+        }, true);
+        feedbackFormSecond.addEventListener('submit', e => {
+            e.preventDefault();
+            feedbackInputs.forEach(input => {
+                if (input.value === '') {
+                    input.nextElementSibling.classList.add('show');
+                    input.previousElementSibling.classList.add('warning');
+                }
+            })
+            const result = Array.from(feedbackInputs).filter(item => item.value === '');
+            if (!result.length) {
+                feedbackFormSecond.submit();
+            }
+        })
+    }
 });
 
 function submitForm() {
