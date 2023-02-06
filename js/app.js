@@ -212,6 +212,36 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    // accordeon items price items
+    let priceSection = document.querySelector('.service');
+    if (priceSection) {
+        priceSection.addEventListener('click', ({ target }) => {
+            console.log(target);
+            if (target.classList.contains('service__slider-toggle')) {
+                let priceList = target.closest('.service__slider-item').querySelector('.service__slider-benefits');
+                let priceListItems = priceList.querySelectorAll('.service__slider-benefit');
+                if (!target.classList.contains('active')) {
+                    target.classList.add('active');
+                    priceListItems.forEach((item, i) => {
+                        if (i > 5) {
+                            item.style.display = 'flex';
+                            item.animate([
+                                { opacity: 0 },
+                                { opacity: 1 }
+                            ], { duration: 200, easing: 'ease-in-out' });
+                        }
+                    });
+                } else if (target.classList.contains('active')) {
+                    priceListItems.forEach((item, i) => {
+                        target.classList.remove('active');
+                        if (i > 5) {
+                            item.style.display = 'none';
+                        }
+                    });
+                }
+            }
+        })
+    }
 });
 
 function submitForm() {
@@ -368,4 +398,91 @@ window.onload = () => {
         });
     }
 
+    // sliders price pages
+    let pricePage = document.querySelector('.service');
+    if (pricePage) {
+        let init = true;
+        // let arraySlider = [];
+        const buildSwiperSlider = (sliderElm, i) => {
+            return new Swiper(sliderElm, {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                navigation: {
+                    prevEl: `.service-arrow-prev-${i}`,
+                    nextEl: `.service-arrow-next-${i}`
+                },
+            });
+        };
+
+        function swiperModePrice() {
+            let allSliders = document.querySelectorAll('.service__slider');
+            let mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)')
+            let desktop = window.matchMedia('(min-width: 769px)');
+            if (mobile.matches && init) {
+                init = false;
+                allSliders.forEach((slider, i) => {
+                    buildSwiperSlider(slider, i);
+                });
+            } else if (desktop.matches && !init) {
+                init = true;
+                allSliders.forEach((slider, i) => {
+                    let swiper = slider.swiper;
+                    swiper.destroy();
+                });
+            }
+        }
+        swiperModePrice();
+        window.addEventListener('resize', function() {
+            swiperModePrice();
+        });
+    }
+
+    // sliders price pages
+    let contactslider = document.querySelector('.contacts');
+    if (contactslider) {
+        var swiper = Swiper;
+        var init = false;
+
+        function swiperMode() {
+            let mobile = window.matchMedia('(min-width: 0px) and (max-width: 1240px)')
+            let desktop = window.matchMedia('(min-width: 1240px)');
+            // Enable (for mobile)
+            if (mobile.matches) {
+                if (!init) {
+                    init = true;
+                    swiper = new Swiper('.contacts__items', {
+                        slidesPerView: 1,
+                        autoplay: false,
+                        centeredSlides: true,
+                        spaceBetween: 10,
+                        loop: true,
+                        navigation: {
+                            nextEl: '.contacts__slider-arrow.next',
+                            prevEl: '.contacts__slider-arrow.prev',
+                        },
+                    });
+                }
+
+            }
+
+            // Disable (for desktop)
+            else if (desktop.matches && init) {
+                swiper.destroy();
+                init = false;
+            }
+        }
+        swiperMode();
+        window.addEventListener('resize', function() {
+            swiperMode();
+        });
+    }
+
+
+    $('.way').waypoint({
+        handler: function() {
+            $(this.element).addClass("way--active");
+
+        },
+        offset: '88%'
+    });
 };
