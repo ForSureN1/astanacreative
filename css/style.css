@@ -1,5 +1,5 @@
 @charset "UTF-8";
-section {
+section:not(.hero) {
   overflow: hidden;
 }
 @font-face {
