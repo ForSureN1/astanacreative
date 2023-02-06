@@ -1,5 +1,7 @@
 @charset "UTF-8";
-
+section {
+  overflow: hidden;
+}
 @font-face {
   font-family: Mulish;
   font-display: swap;
