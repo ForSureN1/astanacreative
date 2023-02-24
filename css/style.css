@@ -1,7 +1,5 @@
 @charset "UTF-8";
-section:not(.hero) {
-  overflow: hidden;
-}
+
 @font-face {
   font-family: Mulish;
   font-display: swap;
@@ -149,6 +147,10 @@ select {
   text-transform: uppercase;
   color: #E3E0DB;
   line-height: 110%;
+}
+
+.title.title-page {
+  margin-bottom: 40px;
 }
 
 .title span:nth-child(1) {
@@ -963,8 +965,12 @@ select {
   width: 515px;
 }
 
-.hero__slider-item:hover .hero__slider-inner {
+.hero__slider-item:not(.triple__slider-item):hover .hero__slider-inner {
   transform: rotateY(180deg);
+}
+
+.hero__slider-item .hero__slider-back {
+  transform: unset;
 }
 
 .hero__slider-inner {
@@ -3610,6 +3616,45 @@ select {
   width: 100%;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
+.pagination li.arrow svg path {
+  transition: 0.2s ease-in-out;
+}
+
+.pagination li.arrow a:hover svg path {
+  fill: #ffffff;
+}
+
+.pagination li.arrow a svg:last-child {
+  display: none;
+}
+
+.pagination li.active a {
+  color: #ffffff;
+  border: 1px solid #E3E0DB;
+  border-radius: 5px;
+}
+
+.pagination li a {
+  padding: 6px 14px;
+  font-weight: 500;
+  font-size: 24px;
+  color: #9F9D99;
+  transition: 0.2s ease-in-out;
+}
+
+.pagination li a:hover {
+  color: #ffffff;
+}
+
 /*alert*/
 
 .box-size {
@@ -3831,6 +3876,10 @@ select {
 @media (max-width: 1650px) {
   .container {
     max-width: 1400px;
+  }
+
+  .title.title-page {
+    margin-bottom: 30px;
   }
 
   .title {
@@ -4521,6 +4570,14 @@ select {
     font-size: 20px;
     margin-left: 60px;
   }
+
+  .pagination {
+    margin-top: 60px;
+  }
+
+  .pagination li a {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 1450px) {
@@ -5075,6 +5132,11 @@ select {
 
   .contacts__item-more {
     font-size: 18px;
+  }
+
+  .pagination li a {
+    font-size: 18px;
+    padding: 6px 12px;
   }
 }
 
@@ -5957,6 +6019,23 @@ select {
     width: 15px;
     height: 15px;
   }
+
+  .pagination {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+
+  .pagination li.arrow a svg:last-child {
+    display: block;
+  }
+
+  .pagination li.arrow a svg:first-child {
+    display: none;
+  }
+
+  .pagination li a {
+    padding: 4px 10px;
+  }
 }
 
 @media (max-width: 992.9px) {
@@ -6395,6 +6474,12 @@ select {
 
   .service__slider-price {
     margin-bottom: 20px;
+  }
+
+  .pagination {
+    justify-content: space-between;
+    -moz-column-gap: 0;
+         column-gap: 0;
   }
 }
 
